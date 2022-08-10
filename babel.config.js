@@ -6,8 +6,11 @@ module.exports = function (api) {
       [
         "module-resolver",
         {
+          "root": [
+            "./src"
+          ],
           alias: {
-            _assets: "./src/assets",
+            _images: "./src/assets/images",
             _components: "./src/components",
             _atoms: "./src/components/atoms",
             _molecules: "./src/components/molecules",
