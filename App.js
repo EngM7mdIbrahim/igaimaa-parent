@@ -1,4 +1,5 @@
 import { StyleSheet, Text, View } from "react-native";
+import AimaaButton from "_components/atoms/AimaaButton";
 import AimaaImage, { IMAGES_SIZES } from "_components/atoms/AimaaImage";
 import AimaaStatusTag from "_components/atoms/AimaaStatusTag";
 import { ALERT, INFO, SECONDARY, WARNING } from "_styles/colors";
@@ -6,6 +7,7 @@ import { ALERT, INFO, SECONDARY, WARNING } from "_styles/colors";
 export default function App() {
   return (
     <View style={styles.container}>
+      <AimaaButton>Sign in</AimaaButton>
     </View>
   );
 }
