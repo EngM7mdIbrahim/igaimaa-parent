@@ -1,10 +1,11 @@
 import { StyleSheet, Text, View } from 'react-native';
-import AimaaLabel from '_atoms/AimaaLabel';
+import AimaaLabel, { LABEL_TYPES } from '_atoms/AimaaLabel';
+import AimaaTextBox from '_components/atoms/AimaaTextBox';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <AimaaLabel>Hello</AimaaLabel>
+      <AimaaTextBox/>
     </View>
   );
 }

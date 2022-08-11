@@ -1,8 +1,9 @@
 import { View, Text } from "react-native";
 import React from "react";
 import styles from "./styles";
-import { FONT_BOLD } from "_styles";
-import { FONT_REGULAR } from "_styles";
+import { Typography, Mixins } from "_styles/index";
+import { boxShadow } from "_styles/mixins";
+import { BLACK, PRIMARY } from "_styles/colors";
 
 export const LABEL_TYPES = {
   TITLE: 1,
@@ -14,31 +15,34 @@ export const LABEL_TYPES = {
 export default function AimaaLabel({
   style = {},
   children,
-  isBold = true,
+  isBold = false,
+  isBlack = false,
   type = LABEL_TYPES.TITLE,
 }) {
-  let className = "title";
+  let fontSize = Typography.FONT_SIZE_52;
   switch (type) {
     case LABEL_TYPES.SUB_TITLE:
-      className = "subTitle";
+      fontSize = Typography.FONT_SIZE_32;
       break;
     case LABEL_TYPES.SUB_SUB_TITLE:
-      className = "subSubTitle";
+      fontSize = Typography.FONT_SIZE_24;
       break;
     case LABEL_TYPES.PAR:
-      className = "paragraph";
+      fontSize = Typography.FONT_SIZE_16;
       break;
   }
 
-  let font = isBold ? FONT_BOLD : FONT_REGULAR;
+  let font = isBold ? Typography.FONT_BOLD : Typography.FONT_REGULAR;
+  let color = isBlack ? BLACK : PRIMARY;
   return (
     <View>
       <Text
         style={{
           ...font,
+          ...style,
           ...styles.container,
-          ...styles[className],
-          fontWeight: "700"
+          color,
+          fontSize,
         }}
       >
         {children}
