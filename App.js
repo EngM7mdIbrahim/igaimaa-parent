@@ -1,11 +1,13 @@
-import { StyleSheet, Text, View } from 'react-native';
-import AimaaLabel, { LABEL_TYPES } from '_atoms/AimaaLabel';
-import AimaaTextBox from '_components/atoms/AimaaTextBox';
+import { StyleSheet, Text, View } from "react-native";
+import AimaaImage, { IMAGES_SIZES } from "_components/atoms/AimaaImage";
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <AimaaTextBox/>
+      <AimaaImage
+        isRounded
+        size={IMAGES_SIZES.SMALL}
+      />
     </View>
   );
 }
@@ -13,8 +15,8 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center",
   },
 });
