@@ -3,7 +3,7 @@ import React from "react";
 import styles from "./styles";
 import { Typography, Mixins } from "_styles/index";
 import { boxShadow } from "_styles/mixins";
-import { BLACK, PRIMARY } from "_styles/colors";
+import { BLACK, PRIMARY, WHITE } from "_styles/colors";
 
 export const LABEL_TYPES = {
   TITLE: 1,
@@ -13,10 +13,12 @@ export const LABEL_TYPES = {
 };
 
 export default function AimaaLabel({
+  textAlign = "left",
   style = {},
   children,
   isBold = false,
   isBlack = false,
+  isWhite = false,
   type = LABEL_TYPES.TITLE,
 }) {
   let fontSize = Typography.FONT_SIZE_52;
@@ -34,6 +36,7 @@ export default function AimaaLabel({
 
   let font = isBold ? Typography.FONT_BOLD : Typography.FONT_REGULAR;
   let color = isBlack ? BLACK : PRIMARY;
+  color = isWhite ? WHITE : color;
   return (
     <View>
       <Text
@@ -43,6 +46,7 @@ export default function AimaaLabel({
           ...styles.container,
           color,
           fontSize,
+          textAlign
         }}
       >
         {children}
