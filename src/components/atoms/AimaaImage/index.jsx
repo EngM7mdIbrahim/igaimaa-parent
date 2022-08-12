@@ -7,7 +7,7 @@ export const IMAGES_SIZES = {
   FULL: '98%',
   EXTRA_LARG: 400,
   LARGE: 300,
-  MEDIUM: 150,
+  MEDIUM: 100,
   SMALL: 50,
   EXTRASMALL: 30
 }
