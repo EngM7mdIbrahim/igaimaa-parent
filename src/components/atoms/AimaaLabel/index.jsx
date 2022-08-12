@@ -2,7 +2,6 @@ import { View, Text } from "react-native";
 import React from "react";
 import styles from "./styles";
 import { Typography, Mixins } from "_styles/index";
-import { boxShadow } from "_styles/mixins";
 import { BLACK, PRIMARY, WHITE } from "_styles/colors";
 
 export const LABEL_TYPES = {
@@ -48,9 +47,9 @@ export default function AimaaLabel({
           color,
           fontSize,
           textAlign,  
-          ...style,
           ...font,
           ...styles.container,
+          ...style,
         }}
       >
         {children}

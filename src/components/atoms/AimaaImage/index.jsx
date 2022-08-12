@@ -5,12 +5,15 @@ import images from "_images/images.js";
 
 export const IMAGES_SIZES = {
   FULL: '98%',
-  LARGE: '50%',
-  MEDIUM: '30%',
-  SMALL: '20%'
+  EXTRA_LARG: 400,
+  LARGE: 300,
+  MEDIUM: 150,
+  SMALL: 50,
+  EXTRASMALL: 30
 }
 
 export default function AimaaImage({
+  style = {},
   imageName = images.test,
   size=IMAGES_SIZES.FULL,
   isRounded = false
@@ -23,7 +26,8 @@ export default function AimaaImage({
       style={{
         width: size,
         ...styles.container,
-        ...rounded
+        ...rounded,
+        ...style
       }}
       source={imageSource}
     />
