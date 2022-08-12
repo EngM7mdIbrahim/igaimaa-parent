@@ -10,6 +10,7 @@ export const LABEL_TYPES = {
   SUB_TITLE: 2,
   SUB_SUB_TITLE: 3,
   PAR: 4,
+  SUB_PAR: 5,
 };
 
 export default function AimaaLabel({
@@ -32,6 +33,9 @@ export default function AimaaLabel({
     case LABEL_TYPES.PAR:
       fontSize = Typography.FONT_SIZE_16;
       break;
+    case LABEL_TYPES.SUB_PAR:
+      fontSize = Typography.FONT_SIZE_12;
+      break;
   }
 
   let font = isBold ? Typography.FONT_BOLD : Typography.FONT_REGULAR;
@@ -41,12 +45,12 @@ export default function AimaaLabel({
     <View>
       <Text
         style={{
-          ...font,
-          ...style,
-          ...styles.container,
           color,
           fontSize,
-          textAlign
+          textAlign,  
+          ...style,
+          ...font,
+          ...styles.container,
         }}
       >
         {children}

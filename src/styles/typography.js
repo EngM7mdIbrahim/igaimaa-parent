@@ -11,8 +11,8 @@ export const FONT_WEIGHT_BOLD = "700";
 export const FONT_SIZE_52 = scaleFont(52);
 export const FONT_SIZE_32 = scaleFont(32);
 export const FONT_SIZE_24 = scaleFont(24);
-export const FONT_SIZE_16 = scaleFont(12);
-export const FONT_SIZE_12 = scaleFont(12)
+export const FONT_SIZE_16 = scaleFont(16);
+export const FONT_SIZE_12 = scaleFont(12);
 
 // LINE HEIGHT
 export const LINE_HEIGHT_52 = scaleFont(54);
