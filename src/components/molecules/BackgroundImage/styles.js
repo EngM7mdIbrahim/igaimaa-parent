@@ -7,7 +7,6 @@ export default StyleSheet.create({
     justifyContent: 'flex-end',
     alignItems: 'center',
     ...padding(30,10,0,10),
-    ...margin(10,10,10,10),
     resizeMode: 'cover'
   },
   

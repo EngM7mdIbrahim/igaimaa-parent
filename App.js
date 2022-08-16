@@ -25,7 +25,7 @@ import { border, WINDOW_HEIGHT, WINDOW_WIDTH } from "_styles/mixins";
 export default function App() {
   return (
     <View style={styles.container}>
-      <BackgroundImage/>
+      <BackgroundImage noBottomLeft noBottomRight/>
     </View>
   );
 }

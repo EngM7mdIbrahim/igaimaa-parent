@@ -16,6 +16,7 @@ export default function BackgroundImage({
   noTopRight = false,
   noTopLeft = false,
   borderValue = 5,
+  imageName = images.user_card_primary
 }) {
   return (
     <View
@@ -33,10 +34,10 @@ export default function BackgroundImage({
       }}
     >
       <AimaaImage
-        imageName={images.user_card_avatars}
+        imageName={imageName}
         style={{
           width: "90%",
-          height: 200,
+          height: 150,
           resizeMode: "cover",
           aspectRatio: undefined,
         }}
