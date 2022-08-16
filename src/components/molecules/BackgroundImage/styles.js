@@ -1,9 +1,14 @@
 import { StyleSheet } from "react-native";
+import { margin, padding } from "_styles/mixins";
 
 export default StyleSheet.create({
   container: {
     width: '100%',
-    justifyContent: 'center',
-    alignItems: 'center'
+    justifyContent: 'flex-end',
+    alignItems: 'center',
+    ...padding(30,10,0,10),
+    ...margin(10,10,10,10),
+    resizeMode: 'cover'
   },
+  
 });

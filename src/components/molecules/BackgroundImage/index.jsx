@@ -1,9 +1,12 @@
 import { View, Text } from "react-native";
 import React from "react";
 import styles from "./styles.js";
-import AimaaImage from "_components/atoms/AimaaImage/index.jsx";
+import AimaaImage, {
+  IMAGES_SIZES,
+} from "_components/atoms/AimaaImage/index.jsx";
 import { SECONDARY } from "_styles/colors.js";
 import { borderRadius } from "_styles/mixins.js";
+import images from "_images/images.js";
 
 export default function BackgroundImage({
   style = {},
@@ -29,7 +32,15 @@ export default function BackgroundImage({
         ...style,
       }}
     >
-      <AimaaImage />
+      <AimaaImage
+        imageName={images.user_card_avatars}
+        style={{
+          width: "90%",
+          height: 200,
+          resizeMode: "cover",
+          aspectRatio: undefined,
+        }}
+      />
     </View>
   );
 }
