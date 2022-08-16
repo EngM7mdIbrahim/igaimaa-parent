@@ -3,12 +3,12 @@ import { border, padding } from "_styles/mixins";
 
 export default StyleSheet.create({
   container: {
-    minHeight: 50,
+    flex: 1,
     ...padding(10, 10, 10, 10),
     flexDirection: "column",
   },
-  scrollView: {
+  flatlist: {
+    flexGrow:0,
     ...padding(10, 10, 10, 10),
-    ...border()
   },
 });

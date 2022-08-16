@@ -6,6 +6,7 @@ import AimaaLabel, {
 } from "_components/atoms/AimaaLabel/index.jsx";
 import AimaaFilterTag from "_components/atoms/AimaaFilterTag/index.jsx";
 import { useState } from "react";
+import { border } from "_styles/mixins.js";
 
 const INIT_STATE = ["All", "Submitted", "Pending", "Absent"];
 
@@ -21,7 +22,8 @@ export default function FilterList({
     <View style={styles.container}>
       {/* <AimaaLabel type={LABEL_TYPES.PAR}>Status: </AimaaLabel> */}
       <FlatList
-        style={styles.scrollView}
+        style={styles.flatlist}
+        contentContainerStyle={styles.innerFlatList}
         data={filters}
         renderItem={({ item }) => {
           return <AimaaFilterTag
