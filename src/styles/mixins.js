@@ -1,6 +1,6 @@
 import { Dimensions, PixelRatio } from "react-native";
 export const WINDOW_WIDTH = Dimensions.get("window").width;
-export const WINDOW_HEIGHT = Dimensions.get('window').height;
+export const WINDOW_HEIGHT = Dimensions.get("window").height;
 const guidelineBaseWidth = 375;
 
 export const scaleSize = (size) => (WINDOW_WIDTH / guidelineBaseWidth) * size;
@@ -14,6 +14,23 @@ function dimensions(top, right = top, bottom = top, left = right, property) {
   styles[`${property}Right`] = right;
   styles[`${property}Bottom`] = bottom;
   styles[`${property}Left`] = left;
+
+  return styles;
+}
+
+export function borderRadius(
+  topLeft,
+  topRight,
+  bottomRight,
+  bottomLeft,
+  value
+) {
+  let styles = {};
+
+  styles[`borderBottomEndRadius`] = bottomRight ? value : 0;
+  styles[`borderBottomStartRadius`] = bottomLeft ? value : 0;
+  styles[`borderTopStartRadius`] = topLeft ? value : 0;
+  styles[`borderTopEndRadius`] = topRight ? value : 0;
 
   return styles;
 }
@@ -41,9 +58,9 @@ export function boxShadow(
   };
 }
 
-export function border(color="#000"){
+export function border(color = "#000") {
   return {
     borderWidth: 2,
     borderColor: color,
-  }
+  };
 }
