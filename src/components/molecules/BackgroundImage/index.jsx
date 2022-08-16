@@ -24,11 +24,11 @@ export default function BackgroundImage({
         ...styles.container,
         backgroundColor,
         ...borderRadius(
+          borderValue,
           !noTopLeft,
           !noTopRight,
           !noBottomRight,
-          !noBottomLeft,
-          borderValue
+          !noBottomLeft
         ),
         ...style,
       }}
@@ -37,8 +37,8 @@ export default function BackgroundImage({
         imageName={imageName}
         style={{
           width: "90%",
-          height: 150,
-          resizeMode: "cover",
+          height: 140,
+          resizeMode: "contain",
           aspectRatio: undefined,
         }}
       />

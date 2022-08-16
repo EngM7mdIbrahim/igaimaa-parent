@@ -19,11 +19,11 @@ function dimensions(top, right = top, bottom = top, left = right, property) {
 }
 
 export function borderRadius(
-  topLeft,
-  topRight,
-  bottomRight,
-  bottomLeft,
-  value
+  value,
+  topLeft = true,
+  topRight = true,
+  bottomRight = true,
+  bottomLeft = true
 ) {
   let styles = {};
 

@@ -11,6 +11,7 @@ import OptionItem from "_components/molecules/OptionItem";
 import TitleSubtitle, {
   TITLES_TYPES,
 } from "_components/molecules/TitleSubtitle";
+import UserCard from "_components/molecules/UserCard";
 import images from "_images/images";
 import {
   ALERT,
@@ -25,7 +26,7 @@ import { border, WINDOW_HEIGHT, WINDOW_WIDTH } from "_styles/mixins";
 export default function App() {
   return (
     <View style={styles.container}>
-      <BackgroundImage noBottomLeft noBottomRight/>
+      <UserCard/>
     </View>
   );
 }
