@@ -11,6 +11,7 @@ import { border } from "_styles/mixins.js";
 const INIT_STATE = ["All", "Submitted", "Pending", "Absent"];
 
 export default function FilterList({
+  title="No title passed - FilterList",
   filters = INIT_STATE,
   onTagSelection = (tag) => {
     console.error("No onTagSelection handler passed - FilterList", tag);
@@ -20,7 +21,7 @@ export default function FilterList({
   console.log('SHow',filters)
   return (
     <View style={styles.container}>
-      {/* <AimaaLabel type={LABEL_TYPES.PAR}>Status: </AimaaLabel> */}
+      <AimaaLabel type={LABEL_TYPES.PAR}>{title}: </AimaaLabel>
       <FlatList
         style={styles.flatlist}
         contentContainerStyle={styles.innerFlatList}
