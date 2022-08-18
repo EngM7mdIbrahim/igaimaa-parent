@@ -7,6 +7,7 @@ import AimaaStatusTag from "_components/atoms/AimaaStatusTag";
 import AvatarIcon from "_components/molecules/AvatarIcon";
 import BackgroundImage from "_components/molecules/BackgroundImage";
 import FilterList from "_components/molecules/FilterList";
+import NewUserCard from "_components/molecules/NewUserCard";
 import OptionItem from "_components/molecules/OptionItem";
 import TitleSubtitle, {
   TITLES_TYPES,
@@ -26,7 +27,7 @@ import { border, WINDOW_HEIGHT, WINDOW_WIDTH } from "_styles/mixins";
 export default function App() {
   return (
     <View style={styles.container}>
-      <UserCard userCourses={5} userName="Mohamed Ibrahim" userLevel="Primary"/>
+      <NewUserCard/>
     </View>
   );
 }
