@@ -19,7 +19,7 @@ export default function UserCard({
     <View style={{ ...styles.container, ...style }}>
       <View style={styles.topContainer}>
         <BackgroundImage noBottomLeft noBottomRight />
-        <AvatarIcon style={styles.profile} size={IMAGES_SIZES.X_MEDIUM} imageName={images.user_card_avatars} />
+        <AvatarIcon style={styles.profile} size={IMAGES_SIZES.SCALE_70} imageName={images.user_card_avatars} />
       </View>
       <TitleSubtitle style={{...margin(5,0,5,0)}} title={userName} subtitle={userLevel} boldTitle />
       <View style={{ width: "100%", height: 1, backgroundColor: SECONDARY, ...margin(5,0,5,0) }} />

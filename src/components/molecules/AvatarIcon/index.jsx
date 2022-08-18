@@ -10,7 +10,7 @@ import { PRIMARY } from "_styles/colors.js";
 
 export default function AvatarIcon({
   style = {},
-  size = IMAGES_SIZES.MEDIUM,
+  size = IMAGES_SIZES.SCALE_100,
   imageName = undefined,
 }) {
   return !imageName ? (

@@ -5,12 +5,13 @@ import images from "_images/images.js";
 
 export const IMAGES_SIZES = {
   FULL: "98%",
-  EXTRA_LARG: 400,
-  LARGE: 300,
-  MEDIUM: 100,
-  X_MEDIUM: 70,
-  SMALL: 50,
-  EXTRASMALL: 30,
+  SCALE_400: 400,
+  SCALE_300: 300,
+  SCALE_100: 100,
+  SCALE_70: 70,
+  SCALE_50: 50,
+  SCALE_30: 30,
+  SCALE_15: 15
 };
 
 export const getNextImageSize = (size, next) => {

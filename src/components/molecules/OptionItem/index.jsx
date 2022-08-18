@@ -16,7 +16,7 @@ export default function OptionItem({
 }) {
   return (
     <View style={{ ...styles.container, flexDirection: isColumn ? 'column': 'row',...style }}>
-      <AimaaImage size={IMAGES_SIZES.SMALL} />
+      <AimaaImage size={IMAGES_SIZES.SCALE_50} />
 
       <AimaaLabel
         style={{ ...margin(10, 10, 0, 10), }}

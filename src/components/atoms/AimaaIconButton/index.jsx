@@ -35,7 +35,7 @@ export default function AimaaIcontButton({
           name={iconName}
         />
       ) : (
-        <AimaaImage imageName={iconName} type={IMAGES_SIZES.SMALL} />
+        <AimaaImage imageName={iconName} type={IMAGES_SIZES.SCALE_50} />
       )}
     </TouchableOpacity>
   );
