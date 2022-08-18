@@ -26,7 +26,7 @@ import { border, WINDOW_HEIGHT, WINDOW_WIDTH } from "_styles/mixins";
 export default function App() {
   return (
     <View style={styles.container}>
-      <UserCard/>
+      <UserCard userCourses={5} userName="Mohamed Ibrahim" userLevel="Primary"/>
     </View>
   );
 }
