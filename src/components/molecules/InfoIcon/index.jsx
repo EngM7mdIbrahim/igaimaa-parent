@@ -11,16 +11,16 @@ export default function InfoIcon({
   style = {},
   text = "No text passed here! - InfoIcon",
   imageName = undefined,
-  isFull = true,
+  isFull = false,
 }) {
   return (
     <View style={{ ...styles.container, ...style }}>
       <AimaaImage
       style={{...margin(10,0,10,0)}}
         imageName={imageName}
-        size={isFull ? IMAGES_SIZES.SCALE_100 : IMAGES_SIZES.SCALE_15}
+        size={isFull ? IMAGES_SIZES.SCALE_100 : IMAGES_SIZES.SCALE_50}
       />
-      <AimaaLabel isBold type={isFull ? LABEL_TYPES.SUB_TITLE : LABEL_TYPES.SUB_PAR}>{text}</AimaaLabel>
+      <AimaaLabel isBold type={isFull ? LABEL_TYPES.SUB_TITLE : LABEL_TYPES.PAR}>{text}</AimaaLabel>
     </View>
   );
 }

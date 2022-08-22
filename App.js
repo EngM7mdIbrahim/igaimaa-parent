@@ -10,6 +10,7 @@ import FilterList from "_components/molecules/FilterList";
 import InfoIcon from "_components/molecules/InfoIcon";
 import NewUserCard from "_components/molecules/NewUserCard";
 import OptionItem from "_components/molecules/OptionItem";
+import ThreeInfoIcon, { STATUS_TAGS } from "_components/molecules/ThreeInfoIcon";
 import TitleSubtitle, {
   TITLES_TYPES,
 } from "_components/molecules/TitleSubtitle";
@@ -23,12 +24,12 @@ import {
   SECONDARY,
   WARNING,
 } from "_styles/colors";
-import { border, WINDOW_HEIGHT, WINDOW_WIDTH } from "_styles/mixins";
+import { border, padding, WINDOW_HEIGHT, WINDOW_WIDTH } from "_styles/mixins";
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <InfoIcon text="Not Found!"/>
+      <ThreeInfoIcon  status={STATUS_TAGS.grading}/>
     </View>
   );
 }
@@ -42,5 +43,6 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     flexDirection: "row",
     ...border("#ff0000"),
+    ...padding(5)
   },
 });
